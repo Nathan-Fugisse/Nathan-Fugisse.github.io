@@ -21,14 +21,14 @@
         }
         .container {
             background-color: #0a0a0a;
-            border: 2px solid #8b0000;
+            border: 2px solid #ff0000;
             padding: 30px;
             border-radius: 5px;
-            box-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
         }
         h1 { 
             text-align: center; 
-            border-bottom: 2px solid #8b0000; 
+            border-bottom: 2px solid #ff0000; 
             padding-bottom: 15px;
             color: #ff0000;
             font-size: 26px;
@@ -48,12 +48,11 @@
         }
         input { 
             width: 100%; 
-            background-color: #1a1a1a;
+            background-color: #000000;
             border: 1px solid #00ff00;
             color: #e0e0e0;
             padding: 12px 15px;
             font-size: 16px;
-            border-radius: 3px;
             font-family: inherit;
         }
         input:focus {
@@ -63,36 +62,21 @@
         }
         button { 
             width: 100%;
-            background-color: #8b0000; 
+            background-color: #ff0000; 
             color: white; 
             padding: 12px; 
             border: none; 
             cursor: pointer;
             font-size: 18px;
             font-weight: bold;
-            border-radius: 3px;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: background-color 0.3s ease;
             margin-top: 10px;
         }
         button:hover {
-            background-color: #ff0000;
+            background-color: #cc0000;
             box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
-        }
-        .info-box {
-            background-color: #1a1a1a;
-            padding: 15px;
-            border: 1px solid #00ff00;
-            margin: 20px 0;
-            text-align: center;
-            font-size: 14px;
-        }
-        .usuario-valido {
-            color: #00ff00;
-            font-weight: bold;
-            display: block;
-            margin-top: 5px;
         }
         .aviso {
             color: #ff0000;
@@ -130,11 +114,6 @@
     <div class="container">
         <h1 class="glitch-effect">SISTEMA DE ACESSO - TORAD VELLUM</h1>
 
-        <div class="info-box">
-            <p>ACESSO RESTRITO A AGENTES AUTORIZADOS</p>
-            <span class="usuario-valido">USUÁRIOS RECONHECIDOS: torad_recruta#987 | colab_torad_1892</span>
-        </div>
-
         <div class="form-group">
             <label for="usuario">IDENTIFICADOR DE AGENTE</label>
             <input type="text" id="usuario" placeholder="Digite seu identificador">
@@ -165,8 +144,8 @@
             
             // Lista de contas válidas
             const contasValidas = [
-                { usuario: "torad_recruta#987", senha: "Vellum#Perg_987" },
-                { usuario: "colab_torad_1892", senha: "Vellum#Perg_09" } // Manterei a senha original que já existia para essa conta
+                { usuario: "torad_recruta#987", senha: "Vellum#Perg_987", pagina: "missoes_recruta.html" },
+                { usuario: "colab_torad_1892", senha: "Vellum#Perg_09", pagina: "arquivos_vitimas.html" }
             ];
 
             // Verifica se as credenciais batem com alguma conta
@@ -175,8 +154,8 @@
             );
 
             if (contaValida) {
-                // Redireciona para a página do vídeo
-                window.location.href = "video_recruta.html";
+                // Redireciona para a página específica da conta
+                window.location.href = contaValida.pagina;
             } else {
                 // Alerta com efeito de sistema
                 alert("% SISTEMA DE SEGURANÇA ATIVADO %\n\nUSUÁRIO OU SENHA INVÁLIDOS\nSUA TENTATIVA FOI REGISTRADA\n\n% PROTOCOLO TORAD-ALERTA ATIVADO %");
