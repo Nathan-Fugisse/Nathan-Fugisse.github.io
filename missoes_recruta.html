@@ -1,120 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Torad Vellum - Transmissão Interna</title>
+    <title>Torad Vellum - Missões do Recruta</title>
     <style>
         body { 
             background-color: #000000; 
-            font-family: Courier New, monospace; 
+            font-family: 'Courier New', Courier, monospace; 
             color: #00ff00; 
-            max-width: 1000px; 
+            max-width: 900px; 
             margin: 0 auto; 
-            padding: 20px;
-            line-height: 1.6;
-            animation: piscarFundo 15s infinite;
+            padding: 30px 20px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://i.imgur.com/0Kz3QzH.png');
+            background-size: cover;
+            background-attachment: fixed;
         }
-        @keyframes piscarFundo {
-            0% { background-color: #000; }
-            96% { background-color: #000; }
-            98% { background-color: #111; }
-            100% { background-color: #000; }
+        .container {
+            background-color: #0a0a0a;
+            border: 2px solid #8b0000;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
         }
         h1 { 
             text-align: center; 
             border-bottom: 2px solid #8b0000; 
-            padding-bottom: 10px;
+            padding-bottom: 15px;
             color: #ff0000;
-            font-size: 24px;
+            font-size: 26px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         .perfil {
-            background-color: #0a0a0a;
+            background-color: #1a1a1a;
             padding: 15px;
+            border: 1px solid #00ff00;
             margin: 20px 0;
-            border: 1px solid #00ff00;
             text-align: center;
-        }
-        .nome-recruta {
-            color: #00ff00;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .video-container {
-            background-color: #0a0a0a;
-            padding: 20px;
-            margin: 30px 0;
-            border: 2px solid #8b0000;
-            text-align: center;
-        }
-        video {
-            max-width: 100%;
-            border: 1px solid #00ff00;
-            filter: contrast(110%) brightness(85%) sepia(10%);
-        }
-        .legenda-video {
-            color: #ff9800;
-            font-size: 16px;
-            margin-top: 15px;
-            text-align: left;
         }
         .aviso {
-            color: #ff0000;
-            font-size: 14px;
-            font-weight: bold;
+            color: #ff9800;
+            font-size: 18px;
             text-align: center;
-            margin-top: 30px;
-            animation: piscarTexto 8s infinite;
+            margin-top: 50px;
+            line-height: 1.8;
         }
-        @keyframes piscarTexto {
-            0% { opacity: 1; }
-            50% { opacity: 0.6; }
-            100% { opacity: 1; }
+        .links {
+            text-align: center;
+            margin-top: 50px;
         }
         a { 
-            color: #ff0000; 
+            color: #00ff00; 
             text-decoration: none; 
+            font-size: 14px;
         }
         a:hover { 
             text-decoration: underline; 
             color: #ff9800;
         }
+        .glitch-effect {
+            animation: glitch 8s infinite;
+        }
+        @keyframes glitch {
+            0% { opacity: 1; }
+            97% { opacity: 1; }
+            98% { opacity: 0.7; }
+            99% { opacity: 1; }
+        }
     </style>
 </head>
 <body>
-    <h1>TRANSMISSÃO INTERNA - APENAS PARA RECRUTA_897</h1>
+    <div class="container">
+        <h1 class="glitch-effect">MISSÕES ATRIBUÍDAS - RECRUTA</h1>
 
-    <div class="perfil">
-        <p class="nome-recruta">RECRUTA_897</p>
-        <p>IDENTIFICADOR CONFIRMADO</p>
-        <p>TRANSMISSÃO REGISTRADA EM: 05/02/2026 - 22:37:19</p>
-        <p>LOCAL: BASE TORAD - UBERLÂNDIA</p>
-    </div>
+        <div class="perfil">
+            <p><strong>IDENTIFICADOR:</strong> torad_recruta#987</p>
+            <p><strong>NÍVEL DE ACESSO:</strong> 1</p>
+            <p><strong>STATUS:</strong> EM TREINAMENTO</p>
+        </div>
 
-    <div class="video-container">
-        <p><strong>ARQUIVO DE VÍDEO: TREINAMENTO_INICIAL_TORAD-897.mp4</strong></p>
-        <!-- Como adicionar o vídeo: -->
-        <!-- 1. Envie o arquivo de vídeo para o seu repositório do GitHub -->
-        <!-- 2. Copie o link do vídeo e substitua no campo "src" abaixo -->
-        <!-- 3. Ou use um link de hospedagem gratuita como o Streamable ou Vimeo (configurado para acesso privado) -->
-        
-        <video controls poster="https://i.imgur.com/exemplo-capa.png">
-            <source src="https://nathan-fugisse.github.io/TREINAMENTO_INICIAL_TORAD-897.mp4" type="WhatsApp Video 2026-02-05 at 20.35.08.mp4">
-            SEU NAVEGADOR NÃO SUPORTA REPRODUÇÃO DE VÍDEO.
-        </video>
+        <div class="aviso glitch-effect">
+            <p>--- NENHUMA MISSÃO ATRIBUÍDA NO MOMENTO ---</p>
+            <p>RETORNE EM BREVE PARA CONSULTAR NOVAS ATRIBUIÇÕES</p>
+            <p>SEU ACESSO SERÁ ATUALIZADO APÓS CONCLUSÃO DO TREINAMENTO</p>
+        </div>
 
-        <div class="legenda-video">
-            <p>• [00:00-01:23] - Apresentação do Comandante Silva sobre os objetivos da Torad Vellum desde 500 A.C.</p>
-            <p>• [01:24-03:10] - Demonstração de técnicas básicas de reconhecimento e infiltração.</p>
-            <p>• [03:11-04:55] - Aviso sobre as regras da organização: sigilo absoluto, obediência aos comandos e punição para traidores.</p>
-            <p>• [04:56-FIM] - Informações sobre o primeiro ponto de encontro em Uberlândia.</p>
+        <div class="links">
+            <a href="acesso.html">VOLTAR PARA A TELA DE ACESSO</a> | <a href="index.html">VOLTAR PARA A PÁGINA PRINCIPAL</a>
         </div>
     </div>
-
-    <div class="aviso">
-        <p>AVISO: ESTE VÍDEO É DE PROPRIEDADE EXCLUSIVA DA TORAD VELLUM</p>
-        <p>NÃO GRAVE, NÃO COMPARTA E NÃO REVELÊ-LO A NENHUM NÃO AUTORIZADO</p>
-        <p>SUA ATIVIDADE ESTÁ SENDO MONITORADA</p>
-    </div>
-
-    <p align="center"><a href="acesso.html">Voltar para a tela de acesso</a> | <a href="index.html">Voltar para a página principal</a></p>
 </body>
 </html>
