@@ -164,8 +164,6 @@
         // Função para salvar sessão do usuário
         function salvarSessao(usuario) {
             localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
-            // Limpa cache do navegador para garantir que as permissões apareçam
-            window.location.reload(true);
         }
 
         // Função para verificar acesso
@@ -195,8 +193,8 @@
 
             if (contaValida) {
                 salvarSessao(contaValida);
-                // Força o redirecionamento
-                window.location.href = "painel.html";
+                // Redirecionamento correto para GitHub Pages
+                window.location.href = window.location.origin + "/painel.html";
             } else {
                 alert("% SISTEMA DE SEGURANÇA ATIVADO %\n\nUSUÁRIO OU SENHA INVÁLIDOS\nSUA TENTATIVA FOI REGISTRADA\n\n% PROTOCOLO TORAD-ALERTA ATIVADO %");
                 document.getElementById("usuario").value = "";
