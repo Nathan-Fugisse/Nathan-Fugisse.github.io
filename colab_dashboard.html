@@ -397,5 +397,157 @@
             <div class="arquivo-vitima">
                 <p class="codigo-vitima">ARQUIVO VÍTIMA #002 - CÓDIGO "Ladrão"</p>
                 <p><span class="dado-vitima">NOME:</span> Tulio Mendes</p>
-                <p
-                    
+                                <p><span class="dado-vitima">IDADE:</span> 45 anos</p>
+                <p><span class="dado-vitima">MAIOR MEDO:</span> A morte de Ale Breu</p>
+                <p><span class="dado-vitima">ESCALA DE RISCO:</span> <span class="risco-alto">9/10</span></p>
+                <p><span class="dado-vitima">TRABALHO:</span> Ex-Rank Z</p>
+                <p><span class="dado-vitima">ASSASSINO:</span> Assassino dos Pesadelos</p>
+                <p><span class="dado-vitima">STATUS:</span> Em Andamento</p>
+            </div>
+
+            <!-- ARQUIVO VÍTIMA #003 -->
+            <div class="arquivo-vitima">
+                <p class="codigo-vitima">ARQUIVO VÍTIMA #003 - CÓDIGO "Mago"</p>
+                <p><span class="dado-vitima">NOME:</span> Laurentius III</p>
+                <p><span class="dado-vitima">IDADE:</span> 49 anos</p>
+                <p><span class="dado-vitima">MAIOR MEDO:</span> A morte de sua esposa e de Salaman</p>
+                <p><span class="dado-vitima">ESCALA DE RISCO:</span> <span class="risco-medio">7/10</span></p>
+                <p><span class="dado-vitima">TRABALHO:</span> Agente de Guilda</p>
+                <p><span class="dado-vitima">ASSASSINO:</span> Assassino dos Pesadelos</p>
+                <p><span class="dado-vitima">STATUS:</span> Pendente</p>
+            </div>
+
+            <!-- ARQUIVO VÍTIMA #004 -->
+            <div class="arquivo-vitima">
+                <p class="codigo-vitima">ARQUIVO VÍTIMA #004 - CÓDIGO "Mendigo"</p>
+                <p><span class="dado-vitima">NOME:</span> Gerivaldo Ferreira Lima</p>
+                <p><span class="dado-vitima">IDADE:</span> 68 anos</p>
+                <p><span class="dado-vitima">MAIOR MEDO:</span> Perder suas memórias de Ale Breu</p>
+                <p><span class="dado-vitima">ESCALA DE RISCO:</span> <span class="risco-medio">6/10</span></p>
+                <p><span class="dado-vitima">TRABALHO:</span> Ex-Membro da organização</p>
+                <p><span class="dado-vitima">ASSASSINO:</span> Assassino dos Pesadelos</p>
+                <p><span class="dado-vitima">STATUS:</span> Pendente</p>
+            </div>
+
+            <!-- ARQUIVO VÍTIMA #005 -->
+            <div class="arquivo-vitima">
+                <p class="codigo-vitima">ARQUIVO VÍTIMA #005 - CÓDIGO "Banco"</p>
+                <p><span class="dado-vitima">NOME:</span> Rafael Lopes Martins</p>
+                <p><span class="dado-vitima">IDADE:</span> 39 anos</p>
+                <p><span class="dado-vitima">MAIOR MEDO:</span> Alturas e queda em grande altura</p>
+                <p><span class="dado-vitima">ESCALA DE RISCO:</span> <span class="risco-alto">8/10</span></p>
+                <p><span class="dado-vitima">TRABALHO:</span> Banqueiro</p>
+                <p><span class="dado-vitima">ASSASSINO:</span> Assassino dos Pesadelos</p>
+                <p><span class="dado-vitima">STATUS:</span> Em Andamento</p>
+            </div>
+
+            <!-- ARQUIVO VÍTIMA #006 -->
+            <div class="arquivo-vitima">
+                <p class="codigo-vitima">ARQUIVO VÍTIMA #006 - CÓDIGO "Livro"</p>
+                <p><span class="dado-vitima">NOME:</span> Larry</p>
+                <p><span class="dado-vitima">IDADE:</span> 24 anos</p>
+                <p><span class="dado-vitima">MAIOR MEDO:</span> Morrer sozinho e sem realizações</p>
+                <p><span class="dado-vitima">ESCALA DE RISCO:</span> <span class="risco-baixo">2/10</span></p>
+                <p><span class="dado-vitima">TRABALHO:</span> Bibliotecário</p>
+                <p><span class="dado-vitima">ASSASSINO:</span> Assassino dos Pesadelos</p>
+                <p><span class="dado-vitima">STATUS:</span> Pendente</p>
+            </div>
+        </div>
+
+        <!-- Aba Chat Online -->
+        <div class="aba-conteudo" id="aba-chat">
+            <h2 class="glitch-effect">CHAT ONLINE - CANAL RESTRITO</h2>
+            
+            <div class="chat-container">
+                <div class="chat-header">
+                    CONEXÃO COM CENTRAL DE COMUNICAÇÕES
+                </div>
+                <div class="chat-mensagens" id="chat-mensagens">
+                    <div class="mensagem mensagem-recebida">
+                        <div class="mensagem-remetente">SISTEMA [08/02/2026 08:30]</div>
+                        <div>Mensagem inicial: Conexão estabelecida com sucesso!</div>
+                    </div>
+                    <div class="mensagem mensagem-recebida">
+                        <div class="mensagem-remetente">COMANDANTE TORAD [08/02/2026 08:35]</div>
+                        <div>Colaborador, verifique os arquivos de vítimas #002 e #005 - prioridade alta.</div>
+                    </div>
+                    <div class="mensagem mensagem-enviada">
+                        <div class="mensagem-remetente">colab_torad_1892 [08/02/2026 08:38]</div>
+                        <div>Confirmado, já estou analisando os dados.</div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="input-mensagem" placeholder="Digite sua mensagem...">
+                    <button class="btn-enviar" onclick="enviarMensagem()">ENVIAR</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="aviso glitch-effect">
+            <p>OS DADOS CONTIDOS NESTE SISTEMA SÃO DESTINADOS APENAS AO USO INTERNO DA TORAD VELLUM</p>
+            <p>QUALQUER DIVULGAÇÃO RESULTARÁ EM ELIMINAÇÃO IMEDIATA CONFORME PROTOCOLO TORAD-500</p>
+        </div>
+    </div>
+
+    <!-- Scripts das Funcionalidades -->
+    <script>
+        // Função para mudar entre abas
+        function mudarAba(idAba) {
+            // Esconde todas as abas
+            const abasConteudo = document.querySelectorAll('.aba-conteudo');
+            const abasBotoes = document.querySelectorAll('.aba-btn');
+            
+            abasConteudo.forEach(aba => aba.classList.remove('ativa'));
+            abasBotoes.forEach(btn => btn.classList.remove('ativa'));
+            
+            // Mostra a aba selecionada
+            document.getElementById(idAba).classList.add('ativa');
+            event.target.classList.add('ativa');
+        }
+
+        // Função para enviar mensagem no chat
+        function enviarMensagem() {
+            const input = document.getElementById('input-mensagem');
+            const mensagemTexto = input.value.trim();
+            
+            if (mensagemTexto !== '') {
+                const chatMensagens = document.getElementById('chat-mensagens');
+                const dataAtual = new Date();
+                const hora = dataAtual.getHours().toString().padStart(2, '0');
+                const minuto = dataAtual.getMinutes().toString().padStart(2, '0');
+                
+                const novaMensagem = document.createElement('div');
+                novaMensagem.classList.add('mensagem', 'mensagem-enviada');
+                novaMensagem.innerHTML = `
+                    <div class="mensagem-remetente">colab_torad_1892 [${hora}:${minuto}]</div>
+                    <div>${mensagemTexto}</div>
+                `;
+                
+                chatMensagens.appendChild(novaMensagem);
+                input.value = '';
+                chatMensagens.scrollTop = chatMensagens.scrollHeight; // Rola para baixo
+            }
+        }
+
+        // Função para sair do sistema
+        function sairDoSistema() {
+            localStorage.removeItem('agenteLogado');
+            window.location.href = 'acesso.html';
+        }
+
+        // Permite enviar mensagem com Enter
+        document.getElementById('input-mensagem').addEventListener('keypress', e => {
+            if (e.key === 'Enter') enviarMensagem();
+        });
+
+        // Verifica se o agente está logado
+        window.onload = function() {
+            const agente = localStorage.getItem('agenteLogado');
+            if (!agente || agente !== 'colab_torad_1892') {
+                window.location.href = 'acesso.html';
+            }
+        }
+    </script>
+</body>
+</html>
+
