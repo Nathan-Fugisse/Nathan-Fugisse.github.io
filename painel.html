@@ -26,6 +26,22 @@
             color: var(--cor-texto-claro);
         }
 
+        /* Tela de Carregamento */
+        .tela-carregamento {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--cor-secundaria);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 200;
+            font-size: 1.2rem;
+            color: var(--cor-primaria);
+        }
+
         /* Menu de Navegação */
         nav {
             background-color: var(--cor-secundaria);
@@ -58,7 +74,7 @@
             transition: color 0.3s ease;
         }
 
-        .nav-link:hover, .nav-link.ativo {
+        .nav-link:hover,        .nav-link:hover, .nav-link.ativo {
             color: var(--cor-primaria);
         }
 
@@ -146,25 +162,6 @@
             font-size: 0.9rem;
         }
 
-        /* Tela de Carregamento */
-        .tela-carregamento {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--cor-secundaria);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 200;
-        }
-
-        .tela-carregamento p {
-            color: var(--cor-primaria);
-            font-size: 1.2rem;
-        }
-
         /* Responsividade */
         @media (max-width: 768px) {
             .nav-menu {
@@ -186,7 +183,7 @@
 <body>
     <!-- Tela de Carregamento -->
     <div class="tela-carregamento" id="telaCarregamento">
-        <p>VERIFICANDO PERMISSÕES... <i class="fas fa-spinner fa-spin"></i></p>
+        VERIFICANDO PERMISSÕES... <span class="spinner">: :</span>
     </div>
 
     <!-- Menu de Navegação -->
@@ -225,4 +222,6 @@
                 <h3>MEU PERFIL</h3>
                 <p>Dados do agente e histórico de atividades</p>
             </a>
-            <a href="vitimas.html
+            <a href="vitimas.html" id="cardVitimas" class="modulo-card" style="display: none;">
+                <i class="
+                    
